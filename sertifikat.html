@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="Cv.png" type="image/x-icon">
+    <title>Portofolio Trisna Almuti</title>
+</head>
+
+<body>
+    <header class="cd-header">
+
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><img class="logo-saya" src="Logo-only.png"
+                        alt=""><span>Trisna</span>Code</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="info-me" id="section1">
+        <div class="switch-wrap">
+            <h1>Sertifikat</h1>
+            <div id="switch" class="hover-target">
+                <div id="circle"></div>
+            </div>
+            <p><span>dark</span> - <span>light</span></p>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="index.html" class="hover-target">home</a></li>
+                <li class="nav__list-item"><a href="skill.html" class="hover-target">Skill</a></li>
+                <li class="nav__list-item"><a href="project.html" class="hover-target">Projek</a></li>
+                <li class="nav__list-item active-nav"><a href="#" class="hover-target">Sertifikat</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="section full-height1 over-hide">
+    </div>
+    <h1 class="h1-content">
+        <span class="h1-content-span">Semakin</span>
+        <span class="h1-content-span">kamu</span>
+        <span class="h1-content-span">membuang-buang</span>
+        <span class="h1-content-span">waktu,</span>
+        <span class="h1-content-span">semakin</span>
+        <span class="h1-content-span">jauh</span>
+        <span class="h1-content-span">pula</span>
+        <span class="h1-content-span">kamu</span>
+        <span class="h1-content-span">dari</span>
+        <span class="h1-content-span">kesuksesan.</span>
+    </h1>
+    <div class="section full-height over-hide center">
+        <div class="container" style="overflow-x:auto;">
+            <div class="wrapper">
+                <div class="card text-center">
+                    <h1 class="tittle">Sertifikat PKL Kelurahan</h1>
+                    <img src="sertifikatpkl.jpg" alt="" class="icon">
+                    <p class="description">Saya pernah PKL dikelurahan saat kelas XI RPL di SMKN 1 Jakarta</p>
+                </div>
+                <div class="card text-center">
+                    <h1 class="tittle">Sertifikat Web Dev</h1>
+                    <img src="https://www.sololearn.com/Certificate/CT-HYKM580W/png" alt="" class="icon">
+                    <p class="description">Saya belajar tentang basic-basic HTML,CSS dan Javascript di Sololearn
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_copyright">
+        <div class="footer_copyright hover-target">
+            <p class="switched2">&copy 2022 Copyright - <script>
+                    document.write(new Date().getFullYear())
+                </script>
+            </p>
+            <p class="switched2">Design by Trisna Almuti</p>
+        </div>
+    </footer>
+    <!-- button to top -->
+    <a href="#section1" class="link-to-portfolio hover-target" target=”_blank”></a>
+    <!-- button to top end -->
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
+    <!-- Link to page
+    ================================================== -->
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Card Animation -->
+    <script type="text/javascript">
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+    <!-- Card Animation End -->
+    <script type="text/javascript">
+        (function ($) {
+            "use strict";
+
+            //Page cursors
+
+            document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
+                t.style.left = n.clientX + "px",
+                    t.style.top = n.clientY + "px",
+                    e.style.left = n.clientX + "px",
+                    e.style.top = n.clientY + "px",
+                    i.style.left = n.clientX + "px",
+                    i.style.top = n.clientY + "px"
+            });
+            var t = document.getElementById("cursor"),
+                e = document.getElementById("cursor2"),
+                i = document.getElementById("cursor3");
+
+            function n(t) {
+                e.classList.add("hover"), i.classList.add("hover")
+            }
+
+            function s(t) {
+                e.classList.remove("hover"), i.classList.remove("hover")
+            }
+            s();
+            for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+                o(r[a])
+            }
+
+            function o(t) {
+                t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+            }
+
+            //Navigation
+
+            var app = function () {
+                var body = undefined;
+                var menu = undefined;
+                var menuItems = undefined;
+                var init = function init() {
+                    body = document.querySelector('body');
+                    menu = document.querySelector('.menu-icon');
+                    menuItems = document.querySelectorAll('.nav__list-item');
+                    applyListeners();
+                };
+                var applyListeners = function applyListeners() {
+                    menu.addEventListener('click', function () {
+                        return toggleClass(body, 'nav-active');
+                    });
+                };
+                var toggleClass = function toggleClass(element, stringClass) {
+                    if (element.classList.contains(stringClass)) element.classList.remove(stringClass);
+                    else element.classList.add(stringClass);
+                };
+                init();
+            }();
+
+
+            //Switch light/dark
+
+            $("#switch").on('click', function () {
+                if ($("body").hasClass("light")) {
+                    $("body").removeClass("light");
+                    $("#switch").removeClass("switched");
+                } else {
+                    $("body").addClass("light");
+                    $("#switch").addClass("switched");
+                }
+            });
+
+        })(jQuery);
+    </script>
+    <!-- Smooth Scrooling Up -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!-- Smooth Scrolling Up End -->
+</body>
+
+</html>

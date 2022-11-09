@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="skill.scss">
+    <link rel="icon" href="Cv.png" type="image/x-icon">
+    <title>Portofolio Trisna Almuti</title>
+</head>
+<style type="text/css">
+    .skills-bar-container {
+        position: relative;
+        width: 40%;
+        min-width: 300px;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        list-style: none;
+        margin-top: 40%;
+    }
+
+    @media screen and (max-width: 580px) {
+        .skills-bar-container {
+            position: relative;
+            margin-top: 100%;
+        }
+    }
+
+    .skills-bar-container li {
+        position: relative;
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+
+    .skills-bar-container li .progressbar-title {
+        color: #fff;
+        justify-content: space-between;
+    }
+
+    .skills-bar-container li .progressbar-title h3 {
+        display: inline-block;
+    }
+
+    .skills-bar-container li .progressbar-title .percent {
+        position: absolute;
+        right: 5px;
+    }
+
+    .skills-bar-container li .bar-container {
+        background: #555;
+        position: relative;
+        width: 100%;
+        height: 5px;
+        margin-top: 5px;
+        display: block;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+    }
+
+    .skills-bar-container li .bar-container .progressbar {
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+
+    .skills-bar-container li .bar-container #progress-html {
+        -webkit-animation-name: progress-html;
+        animation-name: progress-html;
+        -webkit-animation-delay: 0.7s;
+        animation-delay: 0.7s;
+    }
+
+    .skills-bar-container li .bar-container #progress-css {
+        -webkit-animation-name: progress-css;
+        animation-name: progress-css;
+        -webkit-animation-delay: 1.4s;
+        animation-delay: 1.4s;
+    }
+
+    .skills-bar-container li .bar-container #progress-javascript {
+        -webkit-animation-name: progress-javascript;
+        animation-name: progress-javascript;
+        -webkit-animation-delay: 2.1s;
+        animation-delay: 2.1s;
+    }
+
+    .skills-bar-container li .bar-container #progress-php {
+        -webkit-animation-name: progress-php;
+        animation-name: progress-php;
+        -webkit-animation-delay: 2.8s;
+        animation-delay: 2.8s;
+    }
+
+    .skills-bar-container li .bar-container #progress-angular {
+        -webkit-animation-name: progress-angular;
+        animation-name: progress-angular;
+        -webkit-animation-delay: 3.5s;
+        animation-delay: 3.5s;
+    }
+
+    .progressred {
+        background-color: #c0392b;
+    }
+
+    .progressblue {
+        background-color: #19f;
+    }
+
+    .progresspurple {
+        background-color: #9b59b6;
+    }
+
+    .progressorange {
+        background-color: #ffa500;
+    }
+
+    .progressgreen {
+        background-color: #27ae60;
+    }
+
+    @-webkit-keyframes progress-html {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes progress-css {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes progress-javascript {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes progress-php {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes progress-angular {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-moz-keyframes progress-html {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    @-moz-keyframes progress-css {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    @-moz-keyframes progress-javascript {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    @-moz-keyframes progress-php {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    @-moz-keyframes progress-angular {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 0%;
+        }
+    }
+
+    @keyframes progress-html {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 60%;
+        }
+    }
+
+    @keyframes progress-css {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 58%;
+        }
+    }
+
+    @keyframes progress-javascript {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 20%;
+        }
+    }
+
+    @keyframes progress-php {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 30%;
+        }
+    }
+
+    @keyframes progress-angular {
+        0% {
+            width: 0%;
+        }
+
+        100% {
+            width: 5%;
+        }
+    }
+</style>
+
+<body>
+    <header class="cd-header">
+
+        <div class="header-wrapper">
+            <div class="logo-wrap">
+                <a href="#" class="hover-target"><img class="logo-saya" src="Logo-only.png"
+                        alt=""><span>Trisna</span>Code</a>
+            </div>
+            <div class="nav-but-wrap">
+                <div class="menu-icon hover-target">
+                    <span class="menu-icon__line menu-icon__line-left"></span>
+                    <span class="menu-icon__line"></span>
+                    <span class="menu-icon__line menu-icon__line-right"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="info-me" id="section1">
+        <div class="switch-wrap">
+            <h1>SKILLS</h1>
+            <div id="switch" class="hover-target">
+                <div id="circle"></div>
+            </div>
+            <p><span>dark</span> - <span>light</span></p>
+        </div>
+    </div>
+
+    <div class="nav">
+        <div class="nav__content">
+            <ul class="nav__list">
+                <li class="nav__list-item"><a href="index.html" class="hover-target">home</a></li>
+                <li class="nav__list-item active-nav"><a href="#" class="hover-target">Skill</a></li>
+                <li class="nav__list-item"><a href="project.html" class="hover-target">Projek</a></li>
+                <li class="nav__list-item"><a href="sertifikat.html" class="hover-target">Sertifikat</a></li>
+                <li class="nav__list-item"><a href="contact.html" class="hover-target">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div>
+        <div>
+            <ul class="skills-bar-container">
+                <li>
+                    <div class="progressbar-title">
+                        <h3>HTML 5</h3>
+                        <span class="percent" id="html-pourcent"></span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressred" id="progress-html"></span>
+                    </div>
+                </li>
+                <li>
+                    <div class="progressbar-title">
+                        <h3>CSS</h3>
+                        <span class="percent" id="css-pourcent"></span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressblue" id="progress-css"></span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="progressbar-title">
+                        <h3>JavaScript / jQuery</h3>
+                        <span class="percent" id="javascript-pourcent"></span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressorange" id="progress-javascript"></span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="progressbar-title">
+                        <h3>PHP</h3>
+                        <span class="percent" id="php-pourcent"></span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progresspurple" id="progress-php"></span>
+                    </div>
+                </li>
+
+                <li>
+                    <div class="progressbar-title">
+                        <h3>Node.JS</h3>
+                        <span class="percent" id="angular-pourcent"></span>
+                    </div>
+                    <div class="bar-container">
+                        <span class="progressbar progressgreen" id="progress-angular"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <footer class="footer">
+            <div class="footer_copyright hover-target">
+                <p class="switched2">&copy 2022 Copyright - <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                </p>
+                <p class="switched2">Design by Trisna Almuti</p>
+            </div>
+        </footer>
+    </div>
+    <!-- button to top -->
+    <a href="#section1" class="link-to-portfolio hover-target" target=”_blank”></a>
+    <!-- button to top end -->
+
+    <div class='cursor' id="cursor"></div>
+    <div class='cursor2' id="cursor2"></div>
+    <div class='cursor3' id="cursor3"></div>
+
+    <!-- Link to page
+    ================================================== -->
+
+    <script type="text/javascript">
+        var lang = {
+            "html": "100%",
+            "css": "90%",
+            "javascript": "70%",
+            "php": "55%",
+            "angular": "65%"
+        };
+
+        var multiply = 4;
+
+        $.each(lang, function (language, pourcent) {
+
+            var delay = 700;
+
+            setTimeout(function () {
+                $('#' + language + '-pourcent').html(pourcent);
+            }, delay * multiply);
+
+            multiply++;
+
+        });
+    </script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <!-- Card Animation -->
+    <script type="text/javascript">
+        /* Demo purposes only */
+        $(".hover").mouseleave(
+            function () {
+                $(this).removeClass("hover");
+            }
+        );
+    </script>
+    <!-- Card Animation End -->
+    <script type="text/javascript">
+        (function ($) {
+            "use strict";
+
+            //Page cursors
+
+            document.getElementsByTagName("body")[0].addEventListener("mousemove", function (n) {
+                t.style.left = n.clientX + "px",
+                    t.style.top = n.clientY + "px",
+                    e.style.left = n.clientX + "px",
+                    e.style.top = n.clientY + "px",
+                    i.style.left = n.clientX + "px",
+                    i.style.top = n.clientY + "px"
+            });
+            var t = document.getElementById("cursor"),
+                e = document.getElementById("cursor2"),
+                i = document.getElementById("cursor3");
+
+            function n(t) {
+                e.classList.add("hover"), i.classList.add("hover")
+            }
+
+            function s(t) {
+                e.classList.remove("hover"), i.classList.remove("hover")
+            }
+            s();
+            for (var r = document.querySelectorAll(".hover-target"), a = r.length - 1; a >= 0; a--) {
+                o(r[a])
+            }
+
+            function o(t) {
+                t.addEventListener("mouseover", n), t.addEventListener("mouseout", s)
+            }
+
+            //Navigation
+
+            var app = function () {
+                var body = undefined;
+                var menu = undefined;
+                var menuItems = undefined;
+                var init = function init() {
+                    body = document.querySelector('body');
+                    menu = document.querySelector('.menu-icon');
+                    menuItems = document.querySelectorAll('.nav__list-item');
+                    applyListeners();
+                };
+                var applyListeners = function applyListeners() {
+                    menu.addEventListener('click', function () {
+                        return toggleClass(body, 'nav-active');
+                    });
+                };
+                var toggleClass = function toggleClass(element, stringClass) {
+                    if (element.classList.contains(stringClass)) element.classList.remove(stringClass);
+                    else element.classList.add(stringClass);
+                };
+                init();
+            }();
+
+
+            //Switch light/dark
+
+            $("#switch").on('click', function () {
+                if ($("body").hasClass("light")) {
+                    $("body").removeClass("light");
+                    $("#switch").removeClass("switched");
+                } else {
+                    $("body").addClass("light");
+                    $("#switch").addClass("switched");
+                }
+            });
+
+        })(jQuery);
+    </script>
+    <!-- Smooth Scrooling Up -->
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Add smooth scrolling to all links
+            $("a").on('click', function (event) {
+
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
+
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function () {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+        });
+    </script>
+    <!-- Smooth Scrolling Up End -->
+</body>
+
+</html>
